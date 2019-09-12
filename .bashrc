@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias emacs="emacsclient -t"
+alias emacs="emacsclient -t -a="
 bind '\C-H:unix-filename-rubout'
 
 function set-title() {
