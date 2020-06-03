@@ -231,3 +231,5 @@ if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
 fi
 # fixes caps lock to ctrl mapping on startup
 setxkbmap
+# saves command history from multiple windows
+export PROMPT_COMMAND='history -a'
