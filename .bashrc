@@ -114,6 +114,7 @@ if ! shopt -oq posix; then
 fi
 
 alias emacs="emacsclient -t -a="
+
 bind '\C-H:unix-filename-rubout'
 
 function set-title() {
@@ -228,3 +229,5 @@ export LANG=C
 if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
     tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 fi
+# fixes caps lock to ctrl mapping on startup
+setxkbmap
