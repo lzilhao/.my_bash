@@ -226,9 +226,9 @@ stty -ixon
 export LANG=C
 # This starts tmux on ssh and attaches to an existing session.
 # If it doesn't exist, it creates a new one
-if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
-    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
-fi
+#if [[ -z "$TMUX" ]] && [ "$SSH_CONNECTION" != "" ]; then
+#    tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+#fi
 # fixes caps lock to ctrl mapping on startup
 setxkbmap
 # saves command history from multiple windows
